@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Baloo_2, Geist } from 'next/font/google';
 import './globals.css';
 import Providers from './shared/providers';
 
@@ -7,9 +7,8 @@ const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
 });
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const baloo2 = Baloo_2({
+  variable: '--font-baloo2',
   subsets: ['latin'],
 });
 
@@ -24,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+    <html lang='en' className={`${geistSans.variable} ${baloo2.variable} h-full antialiased`}>
       <Providers>
         <body className='min-h-full flex flex-col'>{children}</body>
       </Providers>

@@ -12,10 +12,16 @@
     "eslint": "^10.3.0",
     "prettier": "^3.7.4",
     "turbo": "^2.9.6",
-    "typescript": "5.9.2"
+    "typescript": "5.9.2",
+    "tailwindcss": "^4.x",
+    "@tailwindcss/postcss": "^4.x"
   },
   "packageManager": "pnpm@9.0.0",
   "engines": {
     "node": ">=18"
-  }
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
 }

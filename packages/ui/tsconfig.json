@@ -1,8 +1,18 @@
 {
   "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "declaration": true,
+    "declarationMap": true,
     "outDir": "dist",
     "rootDir": "src",
-    "strictNullChecks": true
+    "strict": true,
+    "lib": ["ESNext", "dom", "dom.iterable"],
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "esModuleInterop": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
