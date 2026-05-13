@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Box, TextField, Button, Alert, CircularProgress } from '@mui/material';
 import { useAuth } from '@/app/shared/providers/auth-provider';
+import Image from 'next/image';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -42,7 +43,13 @@ export default function LoginPage() {
   return (
     <div className='flex h-screen w-full overflow-hidden'>
       <div className='relative w-auto'>
-        <img src='/images/login.svg' alt='Mavi Gök Airlines' className='w-full h-auto max-h-screen bg-primary' />
+        <Image
+          src='/images/login.svg'
+          alt='Mavi Gök Airlines'
+          className='w-full h-auto max-h-screen bg-primary'
+          width={100}
+          height={100}
+        />
       </div>
       <div className='flex-1'>
         <Box
@@ -96,7 +103,13 @@ export default function LoginPage() {
                 </Alert>
               )}
 
-              <Button type='submit' variant='contained' sx={{ mt: 3, borderRadius: '16px' }} disabled={loading}>
+              <Button
+                type='submit'
+                variant='contained'
+                sx={{ mt: 3, borderRadius: '16px' }}
+                disabled={loading}
+                className='bg-primary!'
+              >
                 {loading ? <CircularProgress size={24} /> : 'Login'}
               </Button>
             </form>
